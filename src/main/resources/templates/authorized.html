@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oauth 2.0 Connect Flow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link th:href="@{/style/style.css}" th:rel="stylesheet">
+    <link rel="icon" th:href="@{/img/icon.svg}" type="image/x-icon">
+</head>
+<body>
+<div class="custom-container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+            <h2>Authorization Obtained</h2>
+            <p class="lead">You have successfully obtained the authorization code:</p>
+            <div class="code-highlight">
+                <span th:text="${code}"></span>
+            </div>
+            <p class="lead">Now we can request the access token.</p>
+            <div th:if="${scope} != null">
+                <button class="btn btn-outline-success" onclick="requestAccessTokenFromGoogle()">
+                    Request Access Token
+                </button>
+            </div>
+            <div th:if="${scope} == null">
+                <button class="btn btn-outline-success" onclick="requestAccessTokenFromSpringAuthServer()">
+                    Request Access Token
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/js/accessToken.js}" type="text/javascript"></script>
+</body>
+</html>

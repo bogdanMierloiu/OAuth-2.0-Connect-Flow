@@ -1,0 +1,29 @@
+.custom-container {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.custom-button-container {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.custom-button-container button {
+    margin: 10px;
+}
+
+.code-highlight {
+    background-color: #f8f9fa;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}

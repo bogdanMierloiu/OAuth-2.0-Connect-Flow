@@ -1,0 +1,30 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+*.iml
+
+# IntelliJ IDEA
+.idea/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Gradle
+.gradle/
+build/
+
+spring-boot-starter-*.jar
